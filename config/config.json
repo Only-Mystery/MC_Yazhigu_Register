@@ -1,0 +1,165 @@
+{
+/*网站配置*/
+"website": {
+	/*网页标题*/
+	"title": "鹿游器|我的世界-注册",
+	/*网址绑定*/
+	"url": "mc.ykdlb.cn",
+	/*站点描述*/
+	"description": "Minecraft 是一款堆方块、不断冒险的游戏。在此注册,或浏览网站了解最新消息和社区的精彩创意!",
+	/*SEO关键词*/
+	"keywords": "鹿游器，我的世界, 注册|我的世界, 我的世界pc版",
+	/*首页*/
+	"h1_title": "欢迎你的到来",
+	"h4_title": "电鹿的 MC犽之谷",
+	"checkbox_ag": "《电鹿的Minecraft服务器用户服务条款》",
+	"footer": "© 2020 鹿游器"
+},
+
+/*网站服务器配置*/
+"server": {
+	/*服务器IP*/
+	"host": "127.0.0.1",
+	/*端口号*/
+	"port": 80
+},
+
+/*注册配置*/
+"system": {
+	"reg": {
+		"interval": 480,
+		/*注册邮箱限制*/
+		"email": {
+			"mode": "blacklist",
+			"whitelist": "qq.com, sina.com, 163.com, 126.com, 189.comg，mail.com, hotmail.com，outlook.com",
+			"blacklist": "mail.ru"
+		},
+		/*注册IP限制*/
+		"ip": {
+			"mode": "blacklist",
+			"whitelist": "",
+			"blacklist": ""
+		},
+		/*注册区域限制*/
+		"city": {
+			"mode": "blacklist",
+			"whitelist": "中国，英国，香港，台湾",
+			"blacklist": ""
+		}
+	}
+},
+
+/*数据库配置*/
+"mysql": {
+	"host": "localhost",
+	"port": 3306,
+	"user": "root",
+	"password": "root",
+	"dbname": "regx",
+	"users": {
+		"tablename": "regx_users",
+		"prefix": "",
+		"encrypt": "SHA256",
+		"saltlen": 8,
+		"column": {
+			"mySQLColumnId": "id",
+			"mySQLColumnName": "username",
+			"mySQLRealName": "realname",
+			"mySQLColumnPassword": "password",
+			"mySQLColumnEmail": "email",
+			"mySQLColumnInviteCode": "invite_code",
+			"mySQLColumnRegisterDate": "date",
+			"mySQLColumnRegisterIp": "ip"		
+		}
+	},
+	"authme": {
+		"tablename": "authme",
+		"prefix": "",
+		"world": "world",
+		"encrypt": "SHA256",
+		"saltlen": 8,
+		"column": {
+			"mySQLColumnId": "id",
+			"mySQLColumnName": "username",
+			"mySQLRealName": "realname",
+			"mySQLColumnPassword": "password",
+			"mySQLColumnEmail": "email",
+			"mySQLColumnLogged": "isLogged",
+			"mySQLColumnHasSession": "hasSession",
+			"mySQLColumnIp": "ip",
+			"mySQLColumnLastLogin": "lastlogin",
+			"mySQLColumnRegisterDate": "regdate",
+			"mySQLColumnRegisterIp": "regip",
+			"mySQLlastlocX": "x",
+			"mySQLlastlocY": "y",
+			"mySQLlastlocZ": "z",
+			"mySQLlastlocWorld": "world",
+			"mySQLlastlocYaw": "yaw",
+			"mySQLlastlocPitch": "pitch"
+		}
+	}
+},
+
+/*阿里云滑块验证*/
+"verify": {
+	"sendecode": {
+		"AppID": "",
+		"AppSecretKey": ""
+	},
+	"reg": {
+		"AppID": "",
+		"AppSecretKey": ""
+	}
+},
+
+/*SMTP发信邮箱配置*/
+"email": {
+	"smtp": {
+		"host": "smtp.exmail.qq.com",
+		"port": 465,
+		"sercure": true,
+		"username": "",
+		"password": "",
+		"nick": "鹿游器|我的世界",
+		"from": "server@bidc.ltd",
+		"title": "鹿游器|MC注册验证",
+		"servername": "我的世界服务器",
+		"description": "《我的世界服务器》是一个追求温馨和谐、纯净玩法的正版服务器，旨在为玩家打造一个舒适的游戏环境，欢迎您的加入！"
+	},
+	"ecode": {
+		"timeout": 300,
+		"timecount": 0
+	}
+},
+
+/*错误信息提示*/
+"errMsg": {
+	"id": {
+		"check": "您不能使用该昵称",
+		"exist": "该昵称已存在，您不能使用该昵称",
+		"disabled": "该昵称已被禁用，您不能使用该昵称",
+		"regex": "昵称格式不正确"
+	},
+	"e": {
+		"check": "您不能使用该邮箱",
+		"exist": "该邮箱已被注册",
+		"disabled": "该邮箱已被禁用",
+		"regex": "邮箱格式不正确"
+	},
+	"ecode": {
+		"check": "验证码不正确",
+		"regex": "验证码格式不正确"
+	},
+	"ip": {
+		"regex": "IP地址格式不正确",
+		"fast": "您的IP地址在短时间内不能注册！"
+	},
+	"reg": {
+		"success": "作弊、捣乱等违法行为将会被封禁，请珍惜！",
+		"error": "错误代码: 500 注册失败，请联系管理员！",
+		"fast": "您的IP地址在短时间内不能注册！"
+	},
+	"default": "参数错误"
+}
+
+}
