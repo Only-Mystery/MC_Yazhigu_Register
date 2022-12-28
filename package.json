@@ -21,7 +21,7 @@
   },
   "homepage": "https://ykdlb.cn",
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^1.2.1",
     "body-parser": "^1.20.1",
     "config": "^3.3.1",
     "crypto": "^1.0.1",
